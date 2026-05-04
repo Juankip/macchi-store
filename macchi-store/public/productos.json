@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bolso Artesanal Luna",
+    "precio": 45000,
+    "categoria": "bolsos",
+    "imagen": "https://via.placeholder.com/150/fdfbf7/5c4d4c?text=Bolso+Luna"
+  },
+  {
+    "id": 2,
+    "nombre": "Collar Cuarzo Rosa",
+    "precio": 15000,
+    "categoria": "collares",
+    "imagen": "https://via.placeholder.com/150/fdfbf7/5c4d4c?text=Collar+Cuarzo"
+  }
+]
