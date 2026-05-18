@@ -1,16 +1,23 @@
 [
   {
     "id": 1,
-    "nombre": "Bolso Artesanal Luna",
-    "precio": 45000,
-    "categoria": "bolsos",
-    "imagen": "https://via.placeholder.com/150/fdfbf7/5c4d4c?text=Bolso+Luna"
+    "nombre": "Remera de AC/DC",
+    "precio": 25000,
+    "categoria": "remeras",
+    "imagen": "https://via.placeholder.com/200/1a1a1a/ffffff?text=ACDC"
   },
   {
     "id": 2,
-    "nombre": "Collar Cuarzo Rosa",
-    "precio": 15000,
-    "categoria": "collares",
-    "imagen": "https://via.placeholder.com/150/fdfbf7/5c4d4c?text=Collar+Cuarzo"
+    "nombre": "Remera de Pink Floyd",
+    "precio": 27000,
+    "categoria": "remeras",
+    "imagen": "https://via.placeholder.com/200/1a1a1a/ffffff?text=Pink+Floyd"
+  },
+  {
+    "id": 3,
+    "nombre": "Remera de Los Redondos",
+    "precio": 25000,
+    "categoria": "remeras",
+    "imagen": "https://via.placeholder.com/200/1a1a1a/ffffff?text=Redondos"
   }
 ]

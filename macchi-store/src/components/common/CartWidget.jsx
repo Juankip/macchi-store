@@ -6,8 +6,8 @@ const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
 
   return (
-    <Link to="/carrito" style={{ textDecoration: 'none', color: '#5c4d4c', display: 'flex', alignItems: 'center', gap: '5px' }}>
-      🛒 <span style={{ fontWeight: 'bold', backgroundColor: '#eaddd7', padding: '2px 8px', borderRadius: '50%' }}>{totalItems}</span>
+    <Link to="/carrito" style={{ textDecoration: 'none', color: '#eee', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '18px' }}>
+      🤘 <span style={{ fontWeight: 'bold', backgroundColor: '#c1121f', color: '#fff', padding: '2px 8px', borderRadius: '50%', fontSize: '14px' }}>{totalItems}</span>
     </Link>
   );
 };

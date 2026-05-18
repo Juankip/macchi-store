@@ -13,7 +13,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <h2 style={{ fontFamily: 'serif', color: '#5c4d4c', borderBottom: '2px solid #eaddd7', paddingBottom: '10px' }}>Nuestro Catálogo</h2>
+      <h2 style={{ fontFamily: 'sans-serif', color: '#fff', borderBottom: '2px solid #333', paddingBottom: '10px', textTransform: 'uppercase' }}>Merchandising Oficial</h2>
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '20px' }}>
         {productos.map(prod => (
           <Item key={prod.id} {...prod} />
