@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           <h4 style={{ margin: '0 0 15px 0', fontSize: '18px', textTransform: 'uppercase' }}>El Crew</h4>
           <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-            <PersonCard name="Mamá Rockera" role="Fundadora y Dirección" />
+            <PersonCard name="Mercedes Arévalo" role="Fundadora y Dirección" />
             <PersonCard name="JuanSe Macchi" role="Desarrollador Web" />
           </div>
         </div>
