@@ -5,7 +5,7 @@ import Home from "./components/views/Inicio.jsx";
 import ItemListContainer from './components/layout/ItemListContainer';
 import ItemDetailContainer from './components/views/ItemDetailContainer';
 import Cart from './components/views/Cart';
-import Checkout from "./components/views/Checkout.jsx";
+import Checkout from "./components/views/FinalizarCompra.jsx";
 
 function App() {
   return (
