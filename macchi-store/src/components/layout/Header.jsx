@@ -10,7 +10,7 @@ const Header = () => {
       <nav style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
         <ul style={{ listStyle: 'none', display: 'flex', gap: '30px', margin: 0, padding: 0 }}>
           <li><Link to="/" style={{ textDecoration: 'none', color: '#aaa', fontFamily: 'sans-serif', textTransform: 'uppercase', fontWeight: 'bold' }}>Inicio</Link></li>
-          <li><Link to="/productos" style={{ textDecoration: 'none', color: '#aaa', fontFamily: 'sans-serif', textTransform: 'uppercase', fontWeight: 'bold' }}>Remeras</Link></li>
+          <li><Link to="/productos" style={{ textDecoration: 'none', color: '#aaa', fontFamily: 'sans-serif', textTransform: 'uppercase', fontWeight: 'bold' }}>Productos</Link></li>
         </ul>
         <CartWidget />
       </nav>
