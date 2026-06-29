@@ -1,30 +1,34 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Item from '../common/Item';
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [busqueda, setBusqueda] = useState('');
   
-  // Usamos useParams para leer qué categoría tocó el usuario en el menú
   const { categoriaId } = useParams();
 
+  // CARGA DESDE FIREBASE
   useEffect(() => {
-    fetch('/productos.json')
-      .then(response => response.json())
-      .then(data => {
-        // Si la URL dice una categoría, filtramos. Si no, mostramos todo.
+    const productosRef = collection(db, "productos");
+    getDocs(productosRef)
+      .then((respuesta) => {
+        const catalogo = respuesta.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
+
         if (categoriaId) {
-          const filtrados = data.filter(prod => prod.categoria === categoriaId);
+          const filtrados = catalogo.filter(prod => prod.categoria === categoriaId);
           setProductos(filtrados);
         } else {
-          setProductos(data);
+          setProductos(catalogo);
         }
       })
-      .catch(error => console.error("Error cargando productos:", error));
-  }, [categoriaId]); // Le decimos a React que vuelva a hacer esto si cambia la categoría
+      .catch(error => console.error("Error conectando a Firebase:", error));
+  }, [categoriaId]);
 
-  // Filtro extra para la barrita de búsqueda por texto
   const productosFiltrados = productos.filter(prod => 
     prod.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );
@@ -57,7 +61,7 @@ const ItemListContainer = () => {
             <Item key={prod.id} {...prod} />
           ))
         ) : (
-          <p style={{ color: '#aaa', fontSize: '18px' }}>No encontramos ninguna prenda acá. ¡Probá otra categoría!</p>
+          <p style={{ color: '#aaa', fontSize: '18px' }}>Cargando productos desde la nube...</p>
         )}
       </div>
     </div>

@@ -5,7 +5,7 @@ import Home from "./components/views/Inicio.jsx";
 import ItemListContainer from './components/layout/ItemListContainer';
 import ItemDetailContainer from './components/views/ItemDetailContainer';
 import Cart from './components/views/Cart';
-import Checkout from "./components/views/FinalizarCompra.jsx";
+import Checkout from "./components/views/FinalizarCompra.jsx"; // Usamos este
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Route path="/producto/:id" element={<ItemDetailContainer />} />
             <Route path="/carrito" element={<Cart />} />
             
-            {/* Agregamos la ruta del final de compra */}
+            {/* Ruta única para finalizar compra */}
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </Layout>
