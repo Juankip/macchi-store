@@ -12,6 +12,7 @@ const ItemListContainer = () => {
 
   // CARGA DESDE FIREBASE
   useEffect(() => {
+    console.log("¿db está definido?", db);
     const productosRef = collection(db, "productos");
     getDocs(productosRef)
       .then((respuesta) => {
