@@ -1,15 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+// Poné tus claves a mano acá para descartar el problema del .env
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: "AIzaSyBm-rk0PSwh0BrbMiafJKXfIR7WiqAXe10",
+  authDomain: "gen-rockero.firebaseapp.com",
+  projectId: "gen-rockero",
+  storageBucket: "gen-rockero.appspot.com",
+  messagingSenderId: "935248961974",
+  appId: "1:935248961974:web:6113016e95e22bce742117"
 };
 
-console.log("Variables cargadas:", firebaseConfig);
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
